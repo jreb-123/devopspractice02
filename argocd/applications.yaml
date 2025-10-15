@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: practice01
+  name: practice02
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/jreb-123/devopspractice01.git'
+    repoURL: 'https://github.com/jreb-123/devopspractice02.git'
     targetRevision: main
     path: charts/app
     helm:
@@ -14,7 +14,7 @@ spec:
         - values.yaml   # asegúrate que este archivo tenga service.port definido
       parameters:
         - name: image.repository
-          value: jrebpracticeacr.azurecr.io/jrebaza01/practice01-latest
+          value: jrebpracticeacr.azurecr.io/jrebaza01/practice02-latest
         - name: image.tag
           value: latest
       skipTests: true   # evita que Helm ejecute templates de tests
