@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "app.fullname" . }}:{{ .Values.service.port | default 80 }}']
+      args: ['{{ include "app.fullname" . }}:{{ .Values.service.port | default 8080}}']
   restartPolicy: Never
