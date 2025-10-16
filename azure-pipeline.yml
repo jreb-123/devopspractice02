@@ -9,7 +9,7 @@ pool:
 
 variables:
   imageName: 'jrebpracticeacr.azurecr.io/jrebaza01/practice02-latest'
-  chartPath: 'app'
+  chartPath: 'charts/app'
   releaseName: 'practice02'
   namespace: 'dev'
 
